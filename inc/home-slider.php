@@ -11,13 +11,13 @@ function home_slider_template() { ?>
 				<?php // if (get_field('home_slider_slide_speed', 'option')) { echo 'slideshowSpeed:' . get_field('home_slider_slide_speed', 'option') . ',' ;} ?>		// Change to any integrer for example autoPlay : 5000 to play every 5 seconds.
 				// For Developers
 				cssEase: 'ease',
-				fade: true,  // Cause trouble if used slidesToShow: more than one
+				fade: false,  // Cause trouble if used slidesToShow: more than one
 				arrows: true,
-				dots: true,
+				dots: false,
 				infinite: true,
 				speed: 500,
-				autoplay: true,
-				autoplaySpeed: 3000,
+				// autoplay: true,
+				// autoplaySpeed: 3000,
 				slidesToShow: 1,
 				slidesToScroll: 1
 			});
@@ -41,10 +41,10 @@ function home_slider_template() { ?>
 
 				<div class="slick-slide" style="background-image: url('<?php echo $image; ?>')">
 					<?php //the_post_thumbnail(); ?>
-					<div class="slider-caption">
-						<h3><?php the_title(); ?></h3>
-						<?php the_content(); ?>
-					</div>
+					<!-- <div class="slider-caption"> -->
+						<!-- <h3><?php the_title(); ?></h3> -->
+						<!-- <?php the_content(); ?> -->
+					<!-- </div> -->
 				</div>
 
 			<?php endwhile; ?>

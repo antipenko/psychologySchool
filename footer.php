@@ -4,10 +4,12 @@
  */
 ?>
 
-<footer class="footer">
+<footer class="footer text-center">
 	<div class="row">
-		<div class="columns">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_class' => 'inline-list','fallback_cb' => 'foundation_page_menu')); ?>
+		<div class="columns text-center">
+			<img src="<?php the_field('footer_logo', 'options') ?>">
+			<p><?php the_field('footer_text', 'options') ?></p>
+			<p><?php the_field('footer_copyright', 'options') ?></p>
 		</div><!-- END of .columns -->
 	</div><!-- END of .row -->
 </footer><!-- END of  Footer -->

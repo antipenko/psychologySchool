@@ -153,7 +153,7 @@ function foundation_scripts_and_styles() {
 	//plugins
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/plugins/slick.min.js', null, null, true );
 	wp_enqueue_script( 'jquery.fancybox.pack', get_template_directory_uri() . '/js/plugins/jquery.fancybox.pack.js', null, null, true );
-//    wp_enqueue_script( 'google.maps.api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', null, null, true );
+   wp_enqueue_script( 'google.maps.api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', null, null, true );
 
 	//custom javascript
 	wp_enqueue_script( 'global', get_template_directory_uri() . '/js/global.js', null, null, true ); /* This should go first */
@@ -344,8 +344,10 @@ add_action( 'wp_enqueue_scripts', 'foundation_scripts_and_styles' );
 
 /*********************** PUT YOU FUNCTIONS BELOW ********************************/
 
-// add_image_size( 'name', width, height, array('center','center'));
-
+add_image_size( 'benefit', 30, 30, true);
+if( function_exists('acf_add_options_page') ) {
+ acf_add_options_page();
+}
 
 
 

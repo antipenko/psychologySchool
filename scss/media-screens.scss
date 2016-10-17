@@ -95,12 +95,12 @@
             li.has-dropdown {
                 > a:not(.button) {
                     /* Regular menu item style */
-                    color: black;
+                    color: #fff;
                     background: transparent;
                     padding: 0 15px;
                     &:hover {
-                        color: red;
-                        background: grey;
+                        color: #00CD6B;
+                        background: none;
                     }
                     &:after { display: none; }
                 }
@@ -110,8 +110,8 @@
             li.current-menu-item > a:not(.button),
             li.current-page-ancestor > a:not(.button) {
                 /* Style of Current page and Ancestor page */
-                color: grey;
-                background: orange;
+                color: lighten(green, 10%);
+
             }
             // .has-dropdown {
             //     > a { padding: 0 !important; //make padding equal to your general links }
