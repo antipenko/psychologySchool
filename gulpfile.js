@@ -1,26 +1,89 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass');
-    // browserSync = require('browser-sync'); //Подключаем Sass пакет
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 
 
 gulp.task('sass', function () {
-  return gulp.src('scss/**/*.scss')
+  return gulp.src('./development/styles/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('css/'))
-    .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+    .pipe(gulp.dest('./'));
 });
 
-gulp.task('browserSync', function() { // Создаем таск browser-sync
-    browserSync({ // Выполняем browser Sync
-        server: { // Определяем параметры сервера
-            baseDir: './' // Директория для сервера
-        },
-        //notify: false // Отключаем уведомления
-    });
+gulp.task('default', function() {
+
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function() {
-    gulp.watch('scss/**/*.scss', ['sass']); // Наблюдение за sass файлами
-    gulp.watch('*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-    gulp.watch('js/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 'use strict';
+//  /* * * Объявляем переменные * */ 
+//  var gulp = require('gulp'), 
+//  	sass = require('gulp-sass'), 
+//  	watch = require('gulp-watch'), 
+//  	sourcemaps = require('gulp-sourcemaps'), 
+//  	autoprefixer = require('gulp-autoprefixer'), 
+//  	spritesmith = require('gulp.spritesmith'),
+//  	imagemin = require('gulp-imagemin'),
+//  	livereload = require('livereload'),
+// 	browserSync = require('browser-sync').create(),
+// 	reload      = browserSync.reload,
+//  	rename = require("gulp-rename");
+
+// gulp.task('sass', function () {
+//  return gulp.src('/scss/**/*.scss')
+//   .pipe(sourcemaps.init())
+//   .pipe(sass().on('error', sass.logError))
+//   .pipe(sourcemaps.write())
+//   .pipe(gulp.dest('/css'))
+//   .pipe(browserSync.stream());
+// });
+
+// gulp.task('serve',function () {
+//     // Serve files from the root of this project
+//     browserSync({
+//         notify: false,
+//         ui: false,
+//         proxy: 'http://localhost/psihoschool/'
+//     });
+// });
+
+// gulp.task('default', ['serve', 'sass'], function() {
+// 	gulp.watch('/scss/**/*.scss', ['sass']);
+// 	gulp.watch("/*.php").on("change", reload);
+//     // gulp.watch('js/**/*.js').on("change", reload); // Наблюдение за JS файлами в папке js
+// });

@@ -24,6 +24,8 @@ remove_action('wp_head', 'rsd_link');
 
 // Support for Featured Images
 	add_theme_support( 'post-thumbnails' );
+	add_image_size ('events', 940 , 400, true);
+	add_image_size ('events-thumb', 370 , 310, true);
 
 // Custom Background
 	add_theme_support( 'custom-background', array('default-color' => 'fff'));

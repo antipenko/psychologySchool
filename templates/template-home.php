@@ -4,16 +4,23 @@
  */
 get_header(); ?>
 <section class="ba-main">
+	<div class="row">
+	<div class="columns ba-description text-center">
+		<p class="ba-description__text">
+			<?php the_field('description-text') ?>
+		</p>
+	</div>
+	</div>
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post();
 		$image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
 		?>
-		<div class="ba-shipping text-center" style="background-image: url('<?php echo $image; ?>'); background-size:cover">
-			<!-- <h1><?php the_title() ?></h1> -->
+		<div class=" text-center" style="background-image: url('<?php echo $image; ?>'); background-size:cover">
+			<!-- <h1><?php the_title() ?></h1>
 			<?php the_content(); ?>
 			<a href=" <?php the_field('baner_button_link')?>" class="button  text-center">
 				<?php the_field('baner_button_text') ?>
-			</a>
+			</a> -->
 		</div>
 
 	<?php endwhile; ?>
@@ -22,33 +29,31 @@ get_header(); ?>
 <?php endif; ?>
 </section>
 
-<?php
-$benefiterArgs = array(
-	'post_type'=>'benefiter',
-	'posts_per_page'=>-1,
 
-	);
-	$benefiter = new WP_Query($benefiterArgs);?>
-	<?php if($benefiter->have_posts()): ?>
-		<section class="ba-benefits text-center ">
-			<div class="row">
-				<div class="columns">
-					<h2 class="ba-benefits__title"> <?php the_field('benefits_title') ?> </h2>
-					<?php while($benefiter->have_posts()): $benefiter->the_post() ?>
-						<div class="ba-benefits__item columns medium-3 ">
-							<?php the_post_thumbnail('team') ?>
-							<h4> <?php the_title() ?> </h4>
-							<p><?php the_content()?></p>
-
-						</div>
+<?php 
+$eventArgs = array(
+	'post_type'=>'event',
+	'posts_per_page'=>6,
+	'orderby'=>'date'
+);
+	$event = new WP_Query($eventArgs);?>
+	<?php if($event->have_posts()): ?>
+		<section class="ba-events">
+			<div class="row columns text-center">
+				<h2>Наши мероприятия</h2>
+				<div class="ba-events-list">
+					<?php while($event->have_posts()): $event->the_post() ?>
+						<?php $image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
+						<article class="ba-event" style="background-image: url('<?php echo $image; ?>'); background-size:cover">
+							<h1 class="ba-event__title"> <?php the_title(); ?> </h1>
+							<p class="ba-event__description"><?php the_content(); ?></p>
+							<datetime class="ba-event__date"><?php the_field('event-date'); ?></datetime>
+						</article>
 					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</section>
 	<?php endif;?>
-
-
 
 	<!--HOME PAGE SLIDER-->
 	<div class="ba-slider">

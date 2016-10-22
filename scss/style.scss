@@ -13,7 +13,7 @@
 /* Placeholder styling */
 
 input, textarea{
-    @include placeholder {color: #d1d1d1;}
+  @include placeholder {color: #d1d1d1;}
 }
 
 /* Input Styling */
@@ -53,43 +53,43 @@ textarea[rows]{
     transition-duration: .2s;
     transition-timing-function: ease-in;
     transition-property: color, border-color, background-color, opacity;
-}
+  }
 
-a:focus {outline:none;}
-p:empty {display: none;}
-img.alignright {float:right; margin:0 0 1em 1em}
-img.alignleft {float:left; margin:0 1em 1em 0}
-img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+  a:focus {outline:none;}
+  p:empty {display: none;}
+  img.alignright {float:right; margin:0 0 1em 1em}
+  img.alignleft {float:left; margin:0 1em 1em 0}
+  img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 
 /* ------------------------------------
     Basic Styles
     ------------------------------------- */
-    h1 {/*basic heading styles*/}
-    h2 {/*basic heading styles*/}
-    h3 {/*basic heading styles*/}
-    h4 {/*basic heading styles*/}
-    h5 {/*basic heading styles*/}
-    h6 {/*basic heading styles*/}
-    p {/*basic paragraph styles*/}
-    ul {
-        /*basic list styles*/
-        li {
-            /*basic list-item styles*/
-        }
-    }
-    a {
-        &:hover,
-        &:focus {
-            /*basic hover and focus effects*/
-        }
-    }
-    button, .button {
-        padding: rem-calc(10 12 7);
-        &:hover,
-        &:focus {
-            /*basic hover and focus effects*/
-        }
-    }
+  h1 {/*basic heading styles*/}
+h2 {/*basic heading styles*/}
+h3 {/*basic heading styles*/}
+h4 {/*basic heading styles*/}
+h5 {/*basic heading styles*/}
+h6 {/*basic heading styles*/}
+p {/*basic paragraph styles*/}
+ul {
+  /*basic list styles*/
+  li {
+    /*basic list-item styles*/
+  }
+}
+a {
+  &:hover,
+  &:focus {
+    /*basic hover and focus effects*/
+  }
+}
+button, .button {
+  padding: rem-calc(10 12 7);
+  &:hover,
+  &:focus {
+    /*basic hover and focus effects*/
+  }
+}
 
 //use @extend %bgcover; to selector if you need background cover;
 %bgcover{
@@ -101,137 +101,109 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
         Paginator
         -------------------------------*/
         ul.pagination li a{
-            padding: 0 7px;
-            border-radius: 0;
+          padding: 0 7px;
+          border-radius: 0;
         }
         .pagination.current{
-            color: #fff;
-            background: #2795b6;
-            padding: 1px 7px 2px 7px;
+          color: #fff;
+          background: #2795b6;
+          padding: 1px 7px 2px 7px;
         }
 
 /* ------------------------------------
-    Header Styles
-    ------------------------------------- */
-    .header {
-        background-color: #f3d6e3;
-        height: 100vh;
-    }
-    .ba-menu {
-         background-color: #6d164c;
+        menu
+        ------------------------------------ */
+        .ba-menu {
+          background-color: #6d164c;
           font-weight: 500;
           font-size: 16px;
           position: absolute;
           bottom: 0;
+          width: 100%;
+          text-align: center;
+          font-weight: bold ;
+        }
+        .menu_vertical {
+          > li {
+            display: block;
+          }
+        }
+        
+/* ------------------------------------
+    Header Styles
+    ------------------------------------- */
+    .header {
+      background-color: #f3d6e3;
+      background: url(../images/ps.jpg);
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 95vh;
+      position: relative;
     }
+
+
     .logo {
-        padding: 40px 0;
+      padding: 40px 0;
+    }
+
+    .header-info{
+      &__text{
+        font-family: HelveticaNeue;
+        color:  #202020;
+        font-size: 66px;
+        font-weight: 500;
+        line-height: 80px;
+        text-align: center;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+      }
+      &__button{
+        border:2px solid #fff;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        background: transparent; 
+        font-weight: bold;
+      }
+
     }
 
 /* ------------------------------------
     Content Styles
     ------------------------------------- */
-    .ba-shipping {
-        padding: 50px 0 190px;
-        .button {
-            background: transparent;
-            border:2px solid #f3f7f6;
-            color:#f3f7f6;
-            font-size: 17px;
-            max-width: 120px;
-            transition: opacity  ease-out 0.5s;
-            &:hover {
-                opacity: .5;
-                transition: opacity  ease-out 0.5s;
-            }
-        }
-    }
-    .ba-benefits {
-        background-color: #F2F7F6;
-        padding: 60px 0;
-        color: #111;
-        h2,h4 {
-            color: #00418B;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-        &__title {
-            padding-bottom: 70px;
-        }
-
-    }
-    .ba-contacts {
-        background-color: #00418B;
-        padding: 40px 0 50px;
-        a {
-            margin-bottom: 0;
-            margin-top: 22px;
-            background-color: #FFF;
-            color:#00418B;
-            font-weight: 500;
-        }
-    }
-    .footer {
-        background-color: #000000;
-        padding: 35px 0 85px;
-        color: #fff;
-
-    }
-    .slick{
-        &-slider {
-            margin-bottom: 0;
-        }
-        &-next, &-prev {
-            border:1px solid #f3f7f6;
-            height: 35px;
-            width: 35px;
-        }
-        &-next {
-            right: 45%;
-            top: 130px;
-        }
-        &-prev {
-            left: 45%;
-            top: 130px;
-        }
-    }
-    .ba-slider {
-        position: relative;
-        font-weight: 500;
-        z-index: 2;
-         text-align: center;
-        p, h2{
-            position: absolute;
-            z-index: 99999;
-
-        }
-        p {
-            transform: translateY(200px);
-            max-width: 600px;
-            font-size: 18px;
-
-                }
-        h2 {
-            transform: translateY(70px);
-            min-width: 150px;
-        }
+    .ba-description {
+      padding: 5rem 0;
+      &__text {
+        font-size: 1.75rem;/* Приближение из-за подстановки шрифтов */
+        margin: 0;
+      }
     }
 
+    .ba-events {
+      &__list {
+        
+      }
+    }
+    
+    .ba-event {
+      max-height: 19.375rem;
+      max-width: 23.125rem;
+      position: relative;
+    }
 /* -----------------------------------------
     Contact Form
     ----------------------------------------- */
     .acf-map {
-        width: 100%;
-        height: 400px;
-        margin: 0 0 20px;
+      width: 100%;
+      height: 400px;
+      margin: 0 0 20px;
     }
 
     .acf-map img {
      max-width: inherit !important;
- }
+   }
 
- /*basic Gravity Form styles and fixes, if you dont need/use this comment or delete styles below*/
- @import "inc/gform";
+   /*basic Gravity Form styles and fixes, if you dont need/use this comment or delete styles below*/
+   @import "inc/gform";
 
 /* ------------------------------------
     Footer Styles

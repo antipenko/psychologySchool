@@ -463,10 +463,10 @@ body {
 }
 
 body {
-  background: #fff;
-  color: #fff;
+  background: #FFFFFF;
+  color: #393939;
   cursor: auto;
-  font-family: "FiraSans", FiraSans, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -546,7 +546,7 @@ select {
 
 .row {
   margin: 0 auto;
-  max-width: 71.25rem;
+  max-width: 62.5rem;
   width: 100%;
 }
 
@@ -1615,7 +1615,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "FiraSans", FiraSans, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2430,7 +2430,7 @@ ul.pagination {
 }
 
 ul.pagination li {
-  color: #222222;
+  color: #202020;
   font-size: 0.875rem;
   height: 1.5rem;
   margin-left: 0.3125rem;
@@ -2511,7 +2511,7 @@ ul.pagination li {
 .sub-nav li {
   color: #999999;
   float: left;
-  font-family: "FiraSans", FiraSans, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
   margin-left: 1rem;
@@ -2947,7 +2947,7 @@ fieldset legend {
 }
 
 /* Error Handling */
-"[data-abide]" .error small.error, "[data-abide]" .error span.error, "[data-abide]" span.error, "[data-abide]" small.error {
+[data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
   display: block;
   font-size: 0.75rem;
   font-style: italic;
@@ -2959,7 +2959,7 @@ fieldset legend {
   color: #FFFFFF;
 }
 
-"[data-abide]" span.error, "[data-abide]" small.error {
+[data-abide] span.error, [data-abide] small.error {
   display: none;
 }
 
@@ -3247,7 +3247,7 @@ meta.foundation-mq-topbar {
 .top-bar-section ul li > a {
   color: #FFFFFF;
   display: block;
-  font-family: "FiraSans", FiraSans, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
   padding-left: 0.9375rem;
@@ -3433,7 +3433,7 @@ meta.foundation-mq-topbar {
 .top-bar-section ul li:hover:not(.has-form) > a {
   background-color: #555555;
   color: #FFFFFF;
-  background: #222222;
+  background: #202020;
 }
 
 .top-bar-section ul li.active > a {
@@ -3620,7 +3620,7 @@ meta.foundation-mq-topbar {
   }
   .top-bar-section li.hover > a:not(.button) {
     background-color: #555555;
-    background: #222222;
+    background: #202020;
     color: #FFFFFF;
   }
   .top-bar-section li:not(.has-form) a:not(.button) {
@@ -3630,7 +3630,7 @@ meta.foundation-mq-topbar {
   }
   .top-bar-section li:not(.has-form) a:not(.button):hover {
     background-color: #555555;
-    background: #222222;
+    background: #202020;
   }
   .top-bar-section li.active:not(.has-form) a:not(.button) {
     background: #008CBA;
@@ -3711,7 +3711,7 @@ meta.foundation-mq-topbar {
   .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
     background-color: #555555;
     color: #FFFFFF;
-    background: #222222;
+    background: #202020;
   }
   .top-bar-section .dropdown li label {
     background: #333333;
@@ -3751,7 +3751,7 @@ meta.foundation-mq-topbar {
   }
   .no-js .top-bar-section ul li:hover > a {
     background-color: #555555;
-    background: #222222;
+    background: #202020;
     color: #FFFFFF;
   }
   .no-js .top-bar-section ul li:active > a {
@@ -4006,8 +4006,8 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  color: #fff;
-  font-family: "FiraSans", FiraSans, Roboto, Arial, sans-serif;
+  color: #202020;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.4;
@@ -4017,13 +4017,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  color: white;
+  color: #6e6e6e;
   font-size: 60%;
   line-height: 0;
 }
 
 h1 {
-  font-size: 2.1875rem;
+  font-size: 2.125rem;
 }
 
 h2 {
@@ -4048,7 +4048,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: white;
+  color: #6e6e6e;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -4170,7 +4170,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #fff;
+  color: #393939;
   cursor: help;
 }
 
@@ -4192,7 +4192,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: white;
+  color: #535353;
 }
 
 blockquote cite:before {
@@ -4201,13 +4201,13 @@ blockquote cite:before {
 
 blockquote cite a,
 blockquote cite a:visited {
-  color: white;
+  color: #535353;
 }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: white;
+  color: #6e6e6e;
 }
 
 /* Microformats */
@@ -4245,7 +4245,7 @@ blockquote p {
     line-height: 1.4;
   }
   h1 {
-    font-size: 2.8125rem;
+    font-size: 2.75rem;
   }
   h2 {
     font-size: 2.3125rem;
@@ -7870,18 +7870,8 @@ ul.pagination li a {
 }
 
 /* ------------------------------------
-    Header Styles
-    ------------------------------------- */
-.header {
-  background-color: #f3d6e3;
-  background: url(../images/ps.jpg);
-  -webkit-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-  height: 95vh;
-  position: relative;
-}
-
+        menu
+        ------------------------------------ */
 .ba-menu {
   background-color: #6d164c;
   font-weight: 500;
@@ -7890,117 +7880,62 @@ ul.pagination li a {
   bottom: 0;
   width: 100%;
   text-align: center;
+  font-weight: bold;
+}
+
+.menu_vertical > li {
+  display: block;
+}
+
+/* ------------------------------------
+    Header Styles
+    ------------------------------------- */
+.header {
+  background-color: #f3d6e3;
+  background: url(../images/ps.jpg);
+  background-size: cover;
+  height: 95vh;
+  position: relative;
 }
 
 .logo {
   padding: 40px 0;
 }
 
+.header-info__text {
+  font-family: HelveticaNeue;
+  color: #202020;
+  font-size: 66px;
+  font-weight: 500;
+  line-height: 80px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.header-info__button {
+  border: 2px solid #fff;
+  border-radius: 30px;
+  background: transparent;
+  font-weight: bold;
+}
+
 /* ------------------------------------
     Content Styles
     ------------------------------------- */
-      
-.page_title {
-  color:#000;
-}
-.ba-shipping {
-  padding: 50px 0 190px;
+.ba-description {
+  padding: 5rem 0;
 }
 
-.ba-shipping .button {
-  background: transparent;
-  border: 2px solid #f3f7f6;
-  color: #f3f7f6;
-  font-size: 17px;
-  max-width: 120px;
-  transition: opacity  ease-out 0.5s;
+.ba-description__text {
+  font-size: 1.75rem;
+  /* Приближение из-за подстановки шрифтов */
+  margin: 0;
 }
 
-.ba-shipping .button:hover {
-  opacity: .5;
-  transition: opacity  ease-out 0.5s;
-}
-
-.ba-benefits {
-  background-color: #F2F7F6;
-  padding: 60px 0;
-  color: #111;
-}
-
-.ba-benefits h2, .ba-benefits h4 {
-  color: #00418B;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.ba-benefits__title {
-  padding-bottom: 70px;
-}
-
-.ba-contacts {
-  background-color: #00418B;
-  padding: 40px 0 50px;
-}
-
-.ba-contacts a {
-  margin-bottom: 0;
-  margin-top: 22px;
-  background-color: #FFF;
-  color: #00418B;
-  font-weight: 500;
-}
-
-.footer {
-  background-color: #000000;
-  padding: 35px 0 85px;
-  color: #fff;
-}
-
-.slick-slider {
-  margin-bottom: 0;
-}
-
-.slick-next, .slick-prev {
-  border: 1px solid #f3f7f6;
-  height: 35px;
-  width: 35px;
-}
-
-.slick-next {
-  right: 45%;
-  top: 130px;
-}
-
-.slick-prev {
-  left: 45%;
-  top: 130px;
-}
-
-.ba-slider {
+.ba-event {
+  max-height: 19.375rem;
+  max-width: 23.125rem;
   position: relative;
-  font-weight: 500;
-  z-index: 2;
-  text-align: center;
-}
-
-.ba-slider p, .ba-slider h2 {
-  position: absolute;
-  z-index: 99999;
-}
-
-.ba-slider p {
-  -webkit-transform: translateY(200px);
-      -ms-transform: translateY(200px);
-          transform: translateY(200px);
-  max-width: 600px;
-  font-size: 18px;
-}
-
-.ba-slider h2 {
-  -webkit-transform: translateY(70px);
-      -ms-transform: translateY(70px);
-          transform: translateY(70px);
-  min-width: 150px;
 }
 
 /* -----------------------------------------
