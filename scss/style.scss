@@ -156,6 +156,7 @@ button, .button {
         line-height: 80px;
         text-align: center;
         text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        margin-bottom: 40px;
       }
       &__button{
         border:2px solid #fff;
@@ -170,8 +171,14 @@ button, .button {
 /* ------------------------------------
     Content Styles
     ------------------------------------- */
-    .ba-description {
+    .ba-section {
       padding: 5rem 0;
+    }
+    .ba-title {
+      margin-bottom: 5rem;
+    }
+    //////////////////
+    .ba-description {
       &__text {
         font-size: 1.75rem;/* Приближение из-за подстановки шрифтов */
         margin: 0;
@@ -180,7 +187,15 @@ button, .button {
 
     .ba-events {
       background-color: #e9e9e9;
-      &__list {
+      &-list {
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+                justify-content: space-between;
+        -webkit-align-content: space-around;
+                align-content: space-around;
 
       }
     }
@@ -194,20 +209,69 @@ button, .button {
       position: relative;
       -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;     
+      overflow: hidden;
       &-info {
         height: 50%;
+        width: 100%;
         position: absolute;
         top:50%;
         background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.08) 5%, rgba(0,0,0,0.38) 23%, rgba(0,0,0,0.65) 39%, rgba(0,0,0,0.87) 80%, rgba(0,0,0,0.87) 86%, rgba(0,0,0,0.87) 95%);
         background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.08) 5%,rgba(0,0,0,0.38) 23%,rgba(0,0,0,0.65) 39%,rgba(0,0,0,0.87) 80%,rgba(0,0,0,0.87) 86%,rgba(0,0,0,0.87) 95%);
         background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.08) 5%,rgba(0,0,0,0.38) 23%,rgba(0,0,0,0.65) 39%,rgba(0,0,0,0.87) 80%,rgba(0,0,0,0.87) 86%,rgba(0,0,0,0.87) 95%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#de000000',GradientType=0 );
+        -webkit-transition: height, top 0.8s;
+           -moz-transition: height, top 0.8s;
+            -ms-transition: height, top 0.8s;
+             -o-transition: height, top 0.8s;
+                transition: height, top 0.8s;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover &-info , &:focus &-info {
+        top: 20px;
+        height: 100%;
+      }
+      &:hover &__title , &:focus &__title {
+        font-size: 1.4rem;
+        color: #F2F2F2;
+      }
+      &:hover &-info p , &:focus &-info p {
+        display: block;
       }
       &__title {
         font-size: 1.25rem;
-        color: #FFF;
-        padding: 60px 10px 0;
+        color: #fff;
+        padding: 60px 25px 0;
         text-align: left;
+      }
+      p {
+        padding: 20px 25px 0;
+        margin: 0;
+        color: #FFF;
+        display: none;
+        text-align: left;
+      }
+      &__date {
+            position: absolute;
+            display: inline-block;
+            text-align: center;
+            background-color: rgba(38, 38, 38, 0.5);
+            width: 60px;
+            height: 60px;
+            font-weight: 700;
+            border-radius: 6px;
+            top: 25px;
+            left: 25px;
+            font-size: 1.5rem;
+            line-height: 25px;
+            padding: 5px;
+            color: #FFF;
+      }
+      &__link {
+        height: 100%;
+        width: 100%;
       }
     }
 /* -----------------------------------------

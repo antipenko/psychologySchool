@@ -546,7 +546,7 @@ select {
 
 .row {
   margin: 0 auto;
-  max-width: 62.5rem;
+  max-width: 75rem;
   width: 100%;
 }
 
@@ -3601,7 +3601,7 @@ meta.foundation-mq-topbar {
   .contain-to-grid .top-bar {
     margin: 0 auto;
     margin-bottom: 0;
-    max-width: 62.5rem;
+    max-width: 75rem;
   }
   .top-bar-section {
     transition: none 0 0;
@@ -7910,6 +7910,7 @@ ul.pagination li a {
   line-height: 80px;
   text-align: center;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  margin-bottom: 40px;
 }
 
 .header-info__button {
@@ -7922,8 +7923,12 @@ ul.pagination li a {
 /* ------------------------------------
     Content Styles
     ------------------------------------- */
-.ba-description {
+.ba-section {
   padding: 5rem 0;
+}
+
+.ba-title {
+  margin-bottom: 5rem;
 }
 
 .ba-description__text {
@@ -7936,6 +7941,21 @@ ul.pagination li a {
   background-color: #e9e9e9;
 }
 
+.ba-events-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -webkit-align-content: space-around;
+      -ms-flex-line-pack: distribute;
+          align-content: space-around;
+}
+
 .ba-event {
   max-height: 19.375rem;
   max-width: 23.125rem;
@@ -7944,21 +7964,73 @@ ul.pagination li a {
   display: inline-block;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .ba-event-info {
   height: 50%;
+  width: 100%;
   position: absolute;
   top: 50%;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.08) 5%, rgba(0, 0, 0, 0.38) 23%, rgba(0, 0, 0, 0.65) 39%, rgba(0, 0, 0, 0.87) 80%, rgba(0, 0, 0, 0.87) 86%, rgba(0, 0, 0, 0.87) 95%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#de000000',GradientType=0 );
+  transition: height, top 0.8s;
+}
+
+.ba-event:hover {
+  cursor: pointer;
+}
+
+.ba-event:hover .ba-event-info, .ba-event:focus .ba-event-info {
+  top: 20px;
+  height: 100%;
+}
+
+.ba-event:hover .ba-event__title, .ba-event:focus .ba-event__title {
+  font-size: 1.4rem;
+  color: #F2F2F2;
+}
+
+.ba-event:hover .ba-event-info p, .ba-event:focus .ba-event-info p {
+  display: block;
 }
 
 .ba-event__title {
   font-size: 1.25rem;
-  color: #FFF;
-  padding: 60px 10px 0;
+  color: #fff;
+  padding: 60px 25px 0;
   text-align: left;
+}
+
+.ba-event p {
+  padding: 20px 25px 0;
+  margin: 0;
+  color: #FFF;
+  display: none;
+  text-align: left;
+}
+
+.ba-event__date {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(38, 38, 38, 0.5);
+  width: 60px;
+  height: 60px;
+  font-weight: 700;
+  border-radius: 6px;
+  top: 25px;
+  left: 25px;
+  font-size: 1.5rem;
+  line-height: 25px;
+  padding: 5px;
+  color: #FFF;
+}
+
+.ba-event__link {
+  height: 100%;
+  width: 100%;
 }
 
 /* -----------------------------------------
