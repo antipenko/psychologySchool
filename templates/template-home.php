@@ -11,22 +11,6 @@ get_header(); ?>
 		</p>
 	</div>
 	</div>
-	<?php if ( have_posts() ) : ?>
-		<?php while ( have_posts() ) : the_post();
-		$image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
-		?>
-		<div class=" text-center" style="background-image: url('<?php echo $image; ?>'); background-size:cover">
-			<!-- <h1><?php the_title() ?></h1>
-			<?php the_content(); ?>
-			<a href=" <?php the_field('baner_button_link')?>" class="button  text-center">
-				<?php the_field('baner_button_text') ?>
-			</a> -->
-		</div>
-
-	<?php endwhile; ?>
-
-
-<?php endif; ?>
 </section>
 
 
@@ -39,17 +23,20 @@ $eventArgs = array(
 	$event = new WP_Query($eventArgs);?>
 	<?php if($event->have_posts()): ?>
 		<section class="ba-events">
-			<div class="row columns text-center">
+			<div class="row ">
+				<div class="columns text-center">
 				<h2>Наши мероприятия</h2>
 				<div class="ba-events-list">
 					<?php while($event->have_posts()): $event->the_post() ?>
 						<?php $image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 						<article class="ba-event" style="background-image: url('<?php echo $image; ?>'); background-size:cover">
-							<h1 class="ba-event__title"> <?php the_title(); ?> </h1>
-							<p class="ba-event__description"><?php the_content(); ?></p>
-							<datetime class="ba-event__date"><?php the_field('event-date'); ?></datetime>
+							<div class="ba-event-info">
+								<h1 class="ba-event__title"> <?php the_title(); ?> </h1>
+								<datetime class="ba-event__date"><?php the_field('event-date'); ?></datetime>
+							</div>
 						</article>
 					<?php endwhile; ?>
+				</div>
 				</div>
 			</div>
 		</section>
