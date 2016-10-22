@@ -7932,10 +7932,33 @@ ul.pagination li a {
   margin: 0;
 }
 
+.ba-events {
+  background-color: #e9e9e9;
+}
+
 .ba-event {
   max-height: 19.375rem;
   max-width: 23.125rem;
+  height: 310px;
+  width: 370px;
+  display: inline-block;
   position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ba-event-info {
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.08) 5%, rgba(0, 0, 0, 0.38) 23%, rgba(0, 0, 0, 0.65) 39%, rgba(0, 0, 0, 0.87) 80%, rgba(0, 0, 0, 0.87) 86%, rgba(0, 0, 0, 0.87) 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#de000000',GradientType=0 );
+}
+
+.ba-event__title {
+  font-size: 1.25rem;
+  color: #FFF;
+  padding: 60px 10px 0;
+  text-align: left;
 }
 
 /* -----------------------------------------
