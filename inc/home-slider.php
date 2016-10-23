@@ -41,10 +41,10 @@ function home_slider_template() { ?>
 
 				<div class="slick-slide" style="background-image: url('<?php echo $image; ?>')">
 					<?php //the_post_thumbnail(); ?>
-					<!-- <div class="slider-caption"> -->
-						<!-- <h3><?php the_title(); ?></h3> -->
-						<!-- <?php the_content(); ?> -->
-					<!-- </div> -->
+					 <div class="slider-caption">
+						<h3><?php the_title(); ?></h3>
+					 <?php the_content(); ?>
+					</div> 
 				</div>
 
 			<?php endwhile; ?>
