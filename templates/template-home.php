@@ -67,6 +67,7 @@ $eventArgs = array(
 
 					<?php endif; ?>
 				</div>
+				
 				<div class="columns medium-6">
 					<h2 class="ba-course__title ba-title"> <?php the_field('course-name'); ?> </h2>
 					<?php the_field('course-description'); ?>
@@ -75,7 +76,7 @@ $eventArgs = array(
 		</div>
 	</section>
 
-	<!-- eND BA-COURSE -->
+	<!-- END BA-COURSE -->
 	<section class="ba-contacts ">
 		<div class="row ">
 			<h3 class="text-center"><?php the_field('contact_title') ?></h3>
