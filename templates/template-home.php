@@ -47,11 +47,9 @@ $eventArgs = array(
 
 	<!--HOME PAGE SLIDER-->
 	<div class="ba-slider">
-		<h2><?php the_field('title_on_slider') ?></h2>
-		<p><?php the_field('text_on_slider') ?></p>
 		<?php echo home_slider_template(); ?>
-		<!--END of HOME PAGE SLIDER-->
 	</div>
+	<!--END of HOME PAGE SLIDER-->
 	<section class="ba-contacts ">
 		<div class="row ">
 			<h3 class="text-center"><?php the_field('contact_title') ?></h3>

@@ -13,7 +13,7 @@ function home_slider_template() { ?>
 				cssEase: 'ease',
 				fade: false,  // Cause trouble if used slidesToShow: more than one
 				arrows: true,
-				dots: false,
+				dots: true,
 				infinite: true,
 				speed: 500,
 				// autoplay: true,
@@ -42,7 +42,7 @@ function home_slider_template() { ?>
 				<div class="slick-slide" style="background-image: url('<?php echo $image; ?>')">
 					<?php //the_post_thumbnail(); ?>
 					 <div class="slider-caption">
-						<h3><?php the_title(); ?></h3>
+						<h3 class='slider-caption__title'><?php the_title(); ?></h3>
 					 <?php the_content(); ?>
 					</div> 
 				</div>
