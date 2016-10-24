@@ -176,6 +176,7 @@ button, .button {
     }
     .ba-title {
       margin-bottom: 5rem;
+      text-transform: uppercase
     }
     //////////////////
     .ba-description {
@@ -274,6 +275,38 @@ button, .button {
         width: 100%;
       }
     }
+
+    .ba-course {
+      &__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.125rem;
+        line-height: 29px;
+      }
+      &__img {
+        -webkit-border-radius: 35px;
+                border-radius: 35px;
+      }
+      &__button {
+        background-color: #ED7E4D;
+        -webkit-border-radius: 30px;
+                border-radius: 30px;
+        font-weight: bold;
+        line-height: 35px;
+        padding:10px 32px;
+        -webkit-transition: background .4s;
+           -moz-transition: background .4s;
+            -ms-transition: background .4s;
+             -o-transition: background .4s;
+                transition: background .4s;
+        &:hover, &:focus {
+          background: darken(#ED7E4D, 10%);
+        }
+      }
+    } 
+    
 /* -----------------------------------------
     Contact Form
     ----------------------------------------- */

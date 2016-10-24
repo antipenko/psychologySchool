@@ -30,7 +30,7 @@ $eventArgs = array(
 						<?php while($event->have_posts()): $event->the_post() ?>
 							<?php $image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 							<article class="ba-event" style="background-image: url('<?php echo $image; ?>'); background-size:cover">
-							<a href=" <?php the_permalink(); ?>" class='ba-event__link'>
+								<a href=" <?php the_permalink(); ?>" class='ba-event__link'>
 									<datetime class="ba-event__date"><?php the_field('event-date'); ?></datetime>
 									<div class="ba-event-info">
 										<h1 class="ba-event__title"> <?php the_title(); ?> </h1>
@@ -50,6 +50,32 @@ $eventArgs = array(
 		<?php echo home_slider_template(); ?>
 	</div>
 	<!--END of HOME PAGE SLIDER-->
+
+	<!--
+		 section with anons future courses or other information about company.
+		 Now this is section have name "ba-course", but after meet with customer
+		 this sectin be able to change and in Wordpress too
+		 START BA-COURSE
+		-->
+		<section class="ba-sourse ba-section">
+			<div class="row">
+				<div class="columns medium-6">
+					<?php 
+						$image = get_field('course-img');
+					if( !empty($image) ): ?>
+						<img  class='ba-course__img' src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+					<?php endif; ?>
+				</div>
+				<div class="columns medium-6">
+					<h2 class="ba-course__title ba-title"> <?php the_field('course-name'); ?> </h2>
+					<?php the_field('course-description'); ?>
+					<a href=" <?php the_field('course-link'); ?> " class='button ba-course__button'>Читать дальше</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- eND BA-COURSE -->
 	<section class="ba-contacts ">
 		<div class="row ">
 			<h3 class="text-center"><?php the_field('contact_title') ?></h3>
