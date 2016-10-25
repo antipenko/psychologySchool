@@ -7917,7 +7917,7 @@ ul.pagination li a {
 
 .header-info__text {
   font-family: HelveticaNeue;
-  color: #202020;
+  color: #fff;
   font-size: 66px;
   font-weight: 500;
   line-height: 80px;
@@ -7931,6 +7931,7 @@ ul.pagination li a {
   border-radius: 30px;
   background: transparent;
   font-weight: bold;
+  margin-top: 80px;
 }
 
 /* ------------------------------------
