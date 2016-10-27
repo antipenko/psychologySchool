@@ -24,8 +24,11 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
-		<header class="header ">
+		<!-- Check what page current if Home page , that output this code
+			START HEADER ON HOME PAGE
+		 -->
+		<?php if (is_page_template('templates/template-home.php')) { ?>
+		<header class="header header-home">
 			<div class="row large-uncollapse medium-uncollapse small-collapse">
 				<div class=" columns">
 					<div class="logo small-only-text-center text-center">
@@ -61,3 +64,28 @@
 			</div>
 
 		</header><!--END of header -->
+
+		<?php } else { ?>
+			<header class="header" style="display:none;">
+		<div class="row large-uncollapse medium-uncollapse small-collapse">
+			<div class="medium-4 columns">
+				<div class="logo small-only-text-center">
+					<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo('name'); ?>"/></a>
+				</div><!--end of .logo -->
+			</div><!--end of .columns -->
+			<div class="medium-8 columns">
+				<nav class="top-bar" data-topbar="" role="navigation" data-options="{is_hover: false, mobile_show_parent_link: true}">
+
+					<ul class="title-area">
+						<li class="name"></li>
+						<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+					</ul><!-- END of .top-bar -->
+					<section class="top-bar-section">
+						<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'fallback_cb' => 'foundation_page_menu', "container" => false, 'walker' => new foundation_navigation() ) ); ?>
+					</section><!-- END of .top-bar-section -->
+				</nav>
+			</div><!-- END of .columns -->
+		</div><!-- END of .row -->
+	</header><!--END of header -->
+
+		<?php } ?>

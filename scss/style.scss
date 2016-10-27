@@ -148,13 +148,15 @@ button, .button {
     Header Styles
     ------------------------------------- */
     .header {
-      background-color: #f3d6e3;
+      background-color: #ed7e4d;
+      &-home { 
       background: url(../images/ps.jpg);
       -webkit-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       height: 100vh;
       position: relative;
+      }
     }
 
 
@@ -394,6 +396,7 @@ button, .button {
   }
 ul {
   list-style: none !important;
+  margin: 0;
 }
 .widget {
   h3 {

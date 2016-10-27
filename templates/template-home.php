@@ -3,6 +3,7 @@
  * Template Name: Home Page
  */
 get_header(); ?>
+
 <section class="ba-main ba-section">
 	<div class="row">
 		<div class="columns ba-description text-center">
