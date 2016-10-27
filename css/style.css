@@ -7900,6 +7900,21 @@ ul.pagination li a {
   display: block;
 }
 
+.fixed {
+  position: fixed;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 10px 0;
+  opacity: 0.7;
+  transition: opacity .4;
+}
+
+.fixed:hover {
+  opacity: 1;
+}
+
 /* ------------------------------------
     Header Styles
     ------------------------------------- */
@@ -7907,7 +7922,7 @@ ul.pagination li a {
   background-color: #f3d6e3;
   background: url(../images/ps.jpg);
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -8109,6 +8124,8 @@ ul.pagination li a {
 .ba-contacts__button {
   background: #FFF;
   color: #ed7e4d;
+  font-weight: bold;
+  border: 2px solid white;
   border-radius: 30px;
   margin: 0;
   padding: 10px 30px;
@@ -8117,8 +8134,9 @@ ul.pagination li a {
   transform: translateY(-4px);
 }
 
-.ba-contacts__button:hover:hover, .ba-contacts__button:hover:focus, .ba-contacts__button:focus:hover, .ba-contacts__button:focus:focus {
-  box-shadow: #000;
+.ba-contacts__button:hover, .ba-contacts__button:focus {
+  background: transparent;
+  color: #FFF;
 }
 
 /* -----------------------------------------
@@ -8132,6 +8150,81 @@ ul.pagination li a {
 
 .acf-map img {
   max-width: inherit !important;
+}
+
+/* ------------------------------------------
+    footer
+------------------------------------------- */
+.footer {
+  background-color: #32363b;
+  color: #FFF;
+}
+
+ul {
+  list-style: none !important;
+}
+
+.widget h3 {
+  color: #FFF;
+  text-align: center;
+}
+
+.widget a[href^="mailto"] {
+  color: #ED7E4D;
+}
+
+.widget a[href^="mailto"]:hover, .widget a[href^="mailto"]:focus {
+  color: #d85116;
+}
+
+.widget a {
+  color: #fff;
+}
+
+.widget a:hover {
+  opacity: 0.8;
+}
+
+.menu-item {
+  transition: text-decoration .7s;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.menu a {
+  color: #FFF;
+}
+
+.ba-socials__link {
+  background: grey url("../images/social.png") no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transition: botder-color .5s;
+}
+
+.ba-socials__link-fb {
+  background-position: -40px -6px;
+}
+
+.ba-socials__link-tw {
+  background-position: -215px -6px;
+}
+
+.ba-socials__link-inst {
+  background-position: -110px -6px;
+}
+
+.ba-socials__link-vk {
+  background-position: -250px -5px;
+}
+
+.ba-socials__link:hover, .ba-socials__link:focus {
+  border-color: #ED7E4D;
 }
 
 /*basic Gravity Form styles and fixes, if you dont need/use this comment or delete styles below*/

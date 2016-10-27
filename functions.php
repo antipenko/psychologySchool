@@ -118,8 +118,17 @@ remove_action('wp_head', 'rsd_link');
 			'description' => __( 'This sidebar is located on the right-hand side of each page.'),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h5>',
-			'after_title' => '</h5>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>',
+		));
+		register_sidebar( array(
+			'id' => 'foundation_footer-sidebar',
+			'name' => __( 'Sidebar Footer' ),
+			'description' => __( 'This sidebar is located on the footer of each page.'),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>',
 		));
 	}
 	add_action( 'widgets_init', 'foundation_widgets_init' );
@@ -351,12 +360,9 @@ if( function_exists('acf_add_options_page') ) {
  acf_add_options_page();
 }
 
-
-
-
-
-
-
+if( function_exists('acf_add_options_page') ) {
+ acf_add_options_page();
+}
 
 
 

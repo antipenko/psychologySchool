@@ -9,19 +9,6 @@
 @import "plugins/jquery.fancybox";
 @import "plugins/font-awesome.min.scss";
 
-
-@mixin box-shadow($top, $left, $color, $inset: false) {
-  @if $inset {
-    -webkit-box-shadow:inset $top $left $color;
-    -moz-box-shadow:inset $top $left $color;
-    box-shadow:inset $top $left $color;
-  } @else {
-    -webkit-box-shadow: $top $left $color;
-    -moz-box-shadow: $top $left $color;
-    box-shadow: $top $left $color;
-  }
-}
-
 /* Placeholder styling */
 
 input, textarea{
@@ -140,6 +127,22 @@ button, .button {
             display: block;
           }
         }
+        .fixed{
+       position:fixed;
+       top:-5px; left:0;
+       width:100%;
+       height: 50px;
+       padding:10px 0;
+       opacity: 0.7;
+       -webkit-transition: opacity .4;
+          -moz-transition: opacity .4;
+           -ms-transition: opacity .4;
+            -o-transition: opacity .4;
+               transition: opacity .4;
+       &:hover {
+         opacity: 1;
+       }
+   }
         
 /* ------------------------------------
     Header Styles
@@ -150,7 +153,7 @@ button, .button {
       -webkit-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-      height: 95vh;
+      height: 100vh;
       position: relative;
     }
 
@@ -352,6 +355,8 @@ button, .button {
       &__button {
         background: #FFF;
         color: #ed7e4d;
+        font-weight: bold;
+        border:2px solid white;
         -webkit-border-radius: 30px;
                 border-radius: 30px;
         margin: 0;
@@ -362,10 +367,8 @@ button, .button {
              -o-transform: translateY(-4px);
                 transform: translateY(-4px);
         &:hover, &:focus {
-           &:hover, &:focus {
-          -webkit-box-shadow: #000;
-                  box-shadow: #000;
-        }
+           background: transparent;
+           color: #FFF;
         }
       }
     }
@@ -381,6 +384,86 @@ button, .button {
     .acf-map img {
      max-width: inherit !important;
    }
+
+/* ------------------------------------------
+    footer
+------------------------------------------- */
+  .footer {
+    background-color: #32363b;
+    color: #FFF;
+  }
+ul {
+  list-style: none !important;
+}
+.widget {
+  h3 {
+    color: #FFF;
+    text-align: center;
+  }
+  a[href^="mailto"] {
+    color: #ED7E4D;
+    &:hover, &:focus {
+      color: darken(#ED7E4D, 15%);
+    }
+  }
+  a {
+    color: #fff;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.menu {
+  &-item {
+    -webkit-transition: text-decoration .7s;
+       -moz-transition: text-decoration .7s;
+        -ms-transition: text-decoration .7s;
+         -o-transition: text-decoration .7s;
+            transition: text-decoration .7s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  a {
+    color: #FFF;
+    &:hover {
+      
+    }
+  }
+}
+  .ba-socials {
+    &__link {
+      background: grey url('../images/social.png') no-repeat;
+      height: 32px;
+      width: 32px;
+      display: inline-block;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      border:3px solid transparent;
+      -webkit-transition: botder-color .5s;
+         -moz-transition: botder-color .5s;
+          -ms-transition: botder-color.5s;
+           -o-transition: botder-color .5s;
+              transition: botder-color .5s;
+      &-fb {
+        background-position: -40px -6px;
+      }
+      &-tw {
+        background-position: -215px -6px; 
+      }
+      &-inst {
+        background-position: -110px -6px;
+      }
+      &-vk {
+        background-position: -250px -5px;
+      }
+      &:hover, &:focus {
+        border-color: #ED7E4D;
+      }
+    }
+  }
+
 
    /*basic Gravity Form styles and fixes, if you dont need/use this comment or delete styles below*/
    @import "inc/gform";

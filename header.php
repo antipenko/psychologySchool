@@ -41,7 +41,7 @@
 				</div>
 			</div>
 
-			<div class="ba-menu">
+			<div class="ba-menu default" id="menu">
 				<div class="row  large-uncollapse medium-uncollapse small-collapse">
 					<div class=" columns">
 						<nav class="top-bar" data-topbar="" role="navigation" data-options="{is_hover: false, mobile_show_parent_link: true}">
