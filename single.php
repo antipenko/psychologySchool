@@ -6,16 +6,16 @@
  */
 get_header(); ?>
 
-<div class="row">
+<div class="row ">
 	<div class="large-8 medium-8 small-12 columns">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?><!-- BEGIN of Post -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('ba-post'); ?>>
 					<h1 class="page_title"><?php the_title(); ?></h1>
-					<h6><?php _e('Written by');?> <?php the_author_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
+					<h6><?php _e('Written by');?> <?php the_author_link(); ?> on <?php the_time(get_option('date_format')); ?></h6> 
 					<?php if ( has_post_thumbnail()) : ?>
-						<div title="<?php the_title_attribute(); ?>" class="th">
-							<?php the_post_thumbnail(); ?>
+						<div title="<?php the_title_attribute(); ?>" class="th ba-post__image">
+							<?php the_post_thumbnail('events'); ?>
 						</div>
 					<?php endif; ?>
 					<?php the_content(); ?>

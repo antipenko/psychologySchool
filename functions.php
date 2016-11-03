@@ -26,6 +26,7 @@ remove_action('wp_head', 'rsd_link');
 	add_theme_support( 'post-thumbnails' );
 	add_image_size ('events', 940 , 400, true);
 	add_image_size ('events-thumb', 370 , 310, true);
+	add_image_size ('blog-article', 750 , 341, true);
 
 // Custom Background
 	add_theme_support( 'custom-background', array('default-color' => 'fff'));
@@ -116,7 +117,7 @@ remove_action('wp_head', 'rsd_link');
 			'id' => 'foundation_sidebar_right',
 			'name' => __( 'Sidebar Right' ),
 			'description' => __( 'This sidebar is located on the right-hand side of each page.'),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'before_widget' => '<aside id="%1$s" class="widget widget-right %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3>',
 			'after_title' => '</h3>',
@@ -164,7 +165,7 @@ function foundation_scripts_and_styles() {
 	//plugins
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/plugins/slick.min.js', null, null, true );
 	wp_enqueue_script( 'jquery.fancybox.pack', get_template_directory_uri() . '/js/plugins/jquery.fancybox.pack.js', null, null, true );
-   wp_enqueue_script( 'google.maps.api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', null, null, true );
+   wp_enqueue_script( 'google.maps.api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBXXE2zZg3V3IcmwXOdswDiDyHjrirpO9s', null, null, true );
 
 	//custom javascript
 	wp_enqueue_script( 'global', get_template_directory_uri() . '/js/global.js', null, null, true ); /* This should go first */
@@ -353,6 +354,7 @@ add_action( 'wp_enqueue_scripts', 'foundation_scripts_and_styles' );
 
 	// }
 
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 /*********************** PUT YOU FUNCTIONS BELOW ********************************/
 
 add_image_size( 'benefit', 30, 30, true);

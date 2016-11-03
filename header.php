@@ -15,7 +15,7 @@
 
 	<!-- Add Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500' rel='stylesheet' type='text/css'>
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<?php wp_head(); ?>
 	<!--[if IE]>
 		<script src="<?php bloginfo('template_url'); ?>/js/plugins/html5shiv.js"></script>
@@ -27,11 +27,20 @@
 		<!-- Check what page current if Home page , that output this code
 			START HEADER ON HOME PAGE
 		 -->
+			<b style="display: none;position: fixed; left:0; top:30px; z-index: 3325; ">
+<?php
+ //global $template;
+ // print_r(basename($template));
+ // //echo basename($template);
+ // $myPage = basename($template);
+ ?>
+ </b>
+
 		<?php if (is_page_template('templates/template-home.php')) { ?>
 		<header class="header header-home">
 			<div class="row large-uncollapse medium-uncollapse small-collapse">
 				<div class=" columns">
-					<div class="logo small-only-text-center text-center">
+					<div class="logo-home small-only-text-center text-center">
 						<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo('name'); ?>"/></a>
 					</div><!--end of .logo -->
 				</div><!--end of .columns -->
@@ -66,14 +75,14 @@
 		</header><!--END of header -->
 
 		<?php } else { ?>
-			<header class="header" style="display:none;">
+			<header class="header">
 		<div class="row large-uncollapse medium-uncollapse small-collapse">
-			<div class="medium-4 columns">
+			<div class="medium-2 columns">
 				<div class="logo small-only-text-center">
 					<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo('name'); ?>"/></a>
 				</div><!--end of .logo -->
 			</div><!--end of .columns -->
-			<div class="medium-8 columns">
+			<div class="medium-10 columns">
 				<nav class="top-bar" data-topbar="" role="navigation" data-options="{is_hover: false, mobile_show_parent_link: true}">
 
 					<ul class="title-area">
@@ -87,5 +96,5 @@
 			</div><!-- END of .columns -->
 		</div><!-- END of .row -->
 	</header><!--END of header -->
-
+	<div class="ba-page">
 		<?php } ?>

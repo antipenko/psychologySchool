@@ -72,7 +72,7 @@ $eventArgs = array(
 			<div class="columns medium-6">
 				<h2 class="ba-course__title ba-title"> <?php the_field('course-name'); ?> </h2>
 				<?php the_field('course-description'); ?>
-				<a href=" <?php the_field('course-link'); ?> " class='button ba-course__button'>Читать дальше</a>
+				<a href=" <?php the_field('course-link'); ?> " class='button ba-button_more'>Читать дальше</a>
 			</div>
 		</div>
 	</section>
@@ -116,18 +116,6 @@ $eventArgs = array(
 		</div>
 	</div>
 </section>
-
-<section class="ba-map">
-	<?php if( $location = get_field('map')):?>
-		<div class="acf-map">
-			<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-		</div>
-	<?php endif; ?>
-</section>
-
-
-
-
 
 
 <?php get_footer(); ?>
